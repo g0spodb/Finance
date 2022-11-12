@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Finance.RegPage">
+    <StackLayout Padding="5,5,5,5">
+        <Label Text="Регистрация"></Label>
+        <Entry Placeholder="Логин" WidthRequest="230"></Entry>
+        <StackLayout Orientation="Horizontal">
+
+            <Entry IsPassword="True" WidthRequest="200" x:Name="pass" Placeholder="Пароль"></Entry>
+            <Image Source="eye.png" WidthRequest="30" HeightRequest="30">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="Eye_CLick"/>
+                </Image.GestureRecognizers>
+            </Image>
+
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+        <Entry IsPassword="True" WidthRequest="200" x:Name="pass2" Placeholder=" Повторите пароль"></Entry>
+        <Image Source="eye.png" WidthRequest="30" HeightRequest="30">
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer Tapped="Eye_CLick"/>
+            </Image.GestureRecognizers>
+            </Image>
+        </StackLayout>
+        <Entry Placeholder="Почта" WidthRequest="230"></Entry>
+
+        <StackLayout Orientation="Horizontal">
+            <Button Text="Отмена" Clicked="Button_Back"/>
+            <Button Text="Зарегистрироваться" Clicked="Button_Reg"/>
+
+
+        </StackLayout>
+        
+    
+    
+    </StackLayout>
+</ContentPage>

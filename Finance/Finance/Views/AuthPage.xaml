@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Finance.Views.AuthPage">
+    <StackLayout Padding="5,5,5,5">
+
+        <Entry Placeholder="Логин" WidthRequest="230" HorizontalOptions="Center" ></Entry>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+            <Entry IsPassword="True" x:Name="pass" WidthRequest="200"  Placeholder="Пароль"></Entry>
+            <Image Source="eye.png" WidthRequest="30" HeightRequest="30">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="Eye_CLick"/>
+                </Image.GestureRecognizers>
+            </Image>
+        </StackLayout>
+
+        <Button Text="Нет аккаунта? Зарегистрироваться" Clicked="RegClick" WidthRequest="150" FontSize="Micro" HeightRequest="50" HorizontalOptions="Center" BackgroundColor="White" BorderColor="White" TextColor="Gray"/>
+        <Button Text="Войти" WidthRequest="150" HeightRequest="50" Clicked="Button_Clicked"  HorizontalOptions="Center" VerticalOptions="End" BackgroundColor="Brown" BorderColor="Brown" TextColor="White"/>
+    </StackLayout>
+</ContentPage>
